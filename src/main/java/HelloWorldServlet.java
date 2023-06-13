@@ -7,6 +7,11 @@ import javax.servlet.http.*;
 public class HelloWorldServlet extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
+
+
+
+
+
         String name = request.getParameter("name");
 
         response.setContentType("text/html");
@@ -15,8 +20,7 @@ public class HelloWorldServlet extends HttpServlet {
         if (name != null && !name.isEmpty()) {
             out.println("<html><h1>Hello, " +name+ "!</h1></html>");
         } else {
-            out.println("<html><h1>" +
-                    "Hello, World</h1></html>");
+            out.println("<html><h1>Hello, World</h1></html>");
         }
     }
 }

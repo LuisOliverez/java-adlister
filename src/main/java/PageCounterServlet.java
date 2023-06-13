@@ -12,6 +12,7 @@ public class PageCounterServlet extends HttpServlet {
         pageViews = 0;
     }
 
+    @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
         String reset = request.getParameter("reset");
 
