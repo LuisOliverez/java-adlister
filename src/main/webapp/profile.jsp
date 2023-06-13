@@ -1,10 +1,4 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: luisoliverez
-  Date: 6/13/23
-  Time: 8:35 AM
-  To change this template use File | Settings | File Templates.
---%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -14,7 +8,7 @@
 
 <body>
 
-
+<h3>this will be a profile</h3>
 
 
 </body>
