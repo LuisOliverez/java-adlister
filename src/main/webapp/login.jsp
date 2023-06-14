@@ -20,7 +20,7 @@
 <head>
 
     <title>Login</title>
-<%@include file="partials/scripts.jsp"%>
+<%@include file="partials/scripts/scripts.jsp"%>
 </head>
 
 
