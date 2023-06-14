@@ -1,3 +1,4 @@
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -10,15 +11,35 @@ public class PickColorServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        processRequest(request, response);
+        // Forward to the JSP page
+        RequestDispatcher dispatcher = request.getRequestDispatcher("pickcolor.jsp");
+        dispatcher.forward(request, response);
     }
 
-    @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        processRequest(request, response);
-    }
+        @Override
+        protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+            String color = request.getParameter("color");
 
-    private void processRequest(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        response.setContentType("text/html");
+            request.setAttribute("color", color);
 
-        if (request.getMethod().equals("POST")) { }}}
+//
+//            private void processRequest(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+//                response.setContentType("text/html");
+//
+//                if (request.getMethod().equals("POST")) {
+//                    // Retrieve form data
+//                    String color = request.getParameter("color");
+//
+//                    // Print the selected choices
+//                    System.out.println("You entered: " + color);
+//
+//                    request.setAttribute("color", color);
+
+
+                    RequestDispatcher dispatcher = request.getRequestDispatcher("/ViewColorServlet");
+                    dispatcher.forward(request, response);
+
+                }
+}
+
+
