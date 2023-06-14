@@ -6,26 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your Page Title</title>
 
-<%@ include file="head.jsp"%>
+    <%@ include file="head.jsp"%>
     <style>
         body {
-            background-color: #F4ECE3;
+            background: linear-gradient(to bottom, #25311E, #0E1F0C);
+            background-size: 100vw 100vh;
+            color: #FFF;
         }
 
         .form-container {
-            background-color: #D2B48C;
+            background: linear-gradient(to top, #004225, #00311F);
+            margin-top: 20px;
             padding: 20px;
             border-radius: 10px;
         }
 
         label {
-            color: #704214;
+            color: #8AFFB3;
             font-weight: bold;
         }
 
         button[type="submit"] {
-            background-color: #704214;
-            color: #F4ECE3;
+            background: linear-gradient(to bottom, #006C38, #004F26);
+            color: #FFF;
             border: none;
             padding: 8px 20px;
             border-radius: 5px;
@@ -88,33 +91,33 @@
                             <label class="form-check-label" for="topping-ham">Ham</label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" name="toppings" value="philly-cheese"
-                                   id="topping-philly-cheese">
-                            <label class="form-check-label" for="topping-philly-cheese">Philly Cheese</label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" name="toppings" value="bacon"
-                                   id="topping-bacon">
-                            <label class="form-check-label" for="topping-bacon">Bacon</label>
-                        </div>
-                    </div>
-
-                    <!-- Delivery Address -->
-                    <div class="mb-3">
-                        <label for="delivery-address" class="form-label">Delivery Address:</label>
-                        <input type="text" id="delivery-address" name="deliveryAddress" class="form-control">
-                    </div>
-
-                    <!-- Submit Button -->
-                    <button type="submit" name="submit" class="btn btn-primary">Submit</button>
-
-                </form>
-
-            </div>
-        </div>
-    </div>
+<input class="form-check-input" type="checkbox" name="toppings" value="philly-cheese"
+       id="topping-philly-cheese">
+<label class="form-check-label" for="topping-philly-cheese">Philly Cheese</label>
+</div>
+<div class="form-check">
+    <input class="form-check-input" type="checkbox" name="toppings" value="bacon"
+           id="topping-bacon">
+    <label class="form-check-label" for="topping-bacon">Bacon</label>
+</div>
 </div>
 
+<!-- Delivery Address -->
+<div class="mb-3">
+    <label for="delivery-address" class="form-label">Delivery Address:</label>
+    <input type="text" id="delivery-address" name="deliveryAddress" class="form-control">
+</div>
+
+<!-- Submit Button -->
+<button type="submit" name="submit" class="btn btn-primary">Submit</button>
+
+</form>
+
+</div>
+</div>
+</div>
+</div>
 <%@ include file="scripts.jsp"%>
+
 </body>
 </html>
