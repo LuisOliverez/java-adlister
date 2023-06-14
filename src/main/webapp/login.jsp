@@ -1,5 +1,5 @@
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <%  //TEMP INFO FOR TESTING
     String validUsername = "admin";
@@ -16,18 +16,24 @@
     }
 %>
 
-<html>
-<head>
+<!DOCTYPE html>
+<html lang="en">
 
-    <title>Login</title>
-<%@include file="partials/scripts/scripts.jsp"%>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <!-- Bootstrap CSS -->
+
+<%@ include file="partials/head.jsp"%>
+<%--    <!-- Custom CSS -->--%>
 </head>
 
-
 <body>
+<h1>hello</h1>
 
-<%@include file = "partials/loginBootS.jsp" %>
+<%@ include file ="partials/loginBootS.jsp"%>
 
-
+<%@ include file="partials/scripts.jsp"%>
 </body>
 </html>
