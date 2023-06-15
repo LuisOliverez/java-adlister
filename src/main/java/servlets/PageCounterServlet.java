@@ -1,9 +1,11 @@
+package servlets;
+
 import java.io.*;
 import javax.servlet.*;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.*;
 
-@WebServlet(name = "PageCounterServlet", urlPatterns = "/count")
+@WebServlet(name = "servlets.PageCounterServlet", urlPatterns = "/count")
 public class PageCounterServlet extends HttpServlet {
     private int pageViews;
 

@@ -1,3 +1,5 @@
+package servlets;
+
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -7,7 +9,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-@WebServlet(name = "PizzaOrderServlet", urlPatterns = "/pizza-order")
+@WebServlet(name = "servlets.PizzaOrderServlet", urlPatterns = "/pizza-order")
 public class PizzaOrderServlet extends HttpServlet {
 
     @Override
