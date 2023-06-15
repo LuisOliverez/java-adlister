@@ -11,14 +11,14 @@ public class ViewColorServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+        String color = (String) request.getSession().getAttribute("color");
+        request.setAttribute("color", color);
+
         // Forward to the JSP page
         RequestDispatcher dispatcher = request.getRequestDispatcher("viewcolor.jsp");
         dispatcher.forward(request, response);
     }
 
-    @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
-    }
 
 }

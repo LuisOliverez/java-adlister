@@ -5,12 +5,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Title</title>
-    <%@ include file="/partials/head.jsp"%>
+<%--    <%@ include file="/partials/head.jsp"%>--%>
+<style>
+    body {
+        background-color: <%= request.getAttribute("color") %>;
+    }
+</style>
+
 </head>
 
-<body style="background-color: ${color};">
-<h2>this will be color stuff</h2>
+<body>
 
-<%@ include file="partials/scripts.jsp"%>
+<h2>Your favorite color is <%= request.getAttribute("color") %></h2>
+
+<%--<%@ include file="partials/scripts.jsp"%>--%>
+
 </body>
 </html>

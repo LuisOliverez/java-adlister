@@ -18,9 +18,18 @@ public class PickColorServlet extends HttpServlet {
 
         @Override
         protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-            String color = request.getParameter("color");
 
-            request.setAttribute("color", color);
+        String color = request.getParameter("color");
+
+            request.getSession().setAttribute("color", color);
+
+
+
+                    response.sendRedirect("/viewcolor");
+
+                }
+}
+
 
 //
 //            private void processRequest(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -34,12 +43,3 @@ public class PickColorServlet extends HttpServlet {
 //                    System.out.println("You entered: " + color);
 //
 //                    request.setAttribute("color", color);
-
-
-                    RequestDispatcher dispatcher = request.getRequestDispatcher("/ViewColorServlet");
-                    dispatcher.forward(request, response);
-
-                }
-}
-
-

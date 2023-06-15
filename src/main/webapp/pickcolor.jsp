@@ -10,12 +10,15 @@
 </head>
 <body>
 
-  <label for="color-picker" class="form-label">Enter a color:</label>
-  <input type="text" id="color-picker" name="pickcolor" class="form-control">
-
+    <form action="/pickcolor" method="POST">
+          <label for="color" class="form-label">
+              What is your favorite color?
+          </label>
+            <input type="text" id="color" name="color" class="form-control">
 
 <!-- Submit Button -->
 <button type="submit" name="submit">Submit</button>
+    </form>
 
 <%@ include file="partials/scripts.jsp"%>
 </body>
