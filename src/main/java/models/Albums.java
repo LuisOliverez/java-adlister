@@ -1,24 +1,23 @@
 package models;
 
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import java.io.Serializable;
 
 
+@Data
 @NoArgsConstructor
-@Getter
-@Setter
+@AllArgsConstructor
 
-    public class albums implements Serializable {
+    public class Albums implements Serializable {
         private long id;
         private String artist;
         private String name;
-        private long release_date;
+        private long releaseDate;
         private int sales;
         private String genre;
 
-    }
+
+}
 
 
