@@ -11,7 +11,7 @@ public class LoginServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        request.getRequestDispatcher("index.jsp").forward(request, response);
+        request.getRequestDispatcher("WEB-INF/index.jsp").forward(request, response);
 
     }
 
@@ -21,7 +21,7 @@ public class LoginServlet extends HttpServlet {
             String username = request.getParameter("username");
             String password = request.getParameter("password");
             if (username.equals("admin") && password.equals("password")) {
-                response.sendRedirect("/profile");
+                response.sendRedirect("/WEB-INF/profile");
             }
         }
     }

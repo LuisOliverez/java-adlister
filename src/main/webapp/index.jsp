@@ -7,7 +7,7 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <%@ include file="partials/bsHeader.jsp"%>
+    <%@ include file="/partials/bsHeader.jsp"%>
 
     <title>Index</title>
 
@@ -15,7 +15,7 @@
 
 <body>
 <%--NAVBAR--%>
-<%@include file="partials/navbar.jsp"%>
+<%@include file="/partials/navbar.jsp"%>
 
 <table class="table table-striped table-dark">
     <thead>
@@ -37,6 +37,6 @@
     </tbody>
 </table>
 
-<%@ include file="partials/bsFooter.jsp"%>
+<%@ include file="/partials/bsFooter.jsp"%>
 </body>
 </html>
