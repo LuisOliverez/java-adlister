@@ -4,7 +4,7 @@
 %>
 <html>
 <head>
-    <jsp:include page="partials/head.jsp">
+    <jsp:include page="partials/bsHeader.jsp">
         <jsp:param name="title" value="Please Log In" />
     </jsp:include>
 </head>

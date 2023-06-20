@@ -6,9 +6,8 @@
 
 <html>
 <head>
-    <jsp:include page="partials/head.jsp">
-        <jsp:param name="title" value="Welcome to my site!" />
-    </jsp:include>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <%@ include file="partials/bsHeader.jsp"%>
 
     <title>Index</title>
 
@@ -16,9 +15,9 @@
 
 <body>
 <%--NAVBAR--%>
-<jsp:include page="partials/navbar.jsp" />
+<%@include file="partials/navbar.jsp"%>
 
-<table class="table">
+<table class="table table-striped table-dark">
     <thead>
     <tr>
         <th scope="col">Title</th>
@@ -38,5 +37,6 @@
     </tbody>
 </table>
 
+<%@ include file="partials/bsFooter.jsp"%>
 </body>
 </html>
