@@ -2,13 +2,11 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
-<%@ page import="DaoFactory" %> <!-- Import the necessary DAOFactory class -->
-<%@ page import="ListAdsDao" %> <!-- Import the necessary model class -->
 
 
 <html>
 <head>
-    <jsp:include page="../partials/head.jsp">
+    <jsp:include page="partials/head.jsp">
         <jsp:param name="title" value="Welcome to my site!" />
     </jsp:include>
 
@@ -18,7 +16,7 @@
 
 <body>
 <%--NAVBAR--%>
-<jsp:include page="../partials/navbar.jsp" />
+<jsp:include page="partials/navbar.jsp" />
 
 <table class="table">
     <thead>
