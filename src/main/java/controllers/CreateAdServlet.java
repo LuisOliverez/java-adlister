@@ -1,11 +1,19 @@
+package controllers;
+
+
+import dao.Ads;
+import dao.DaoFactory;
+import models.Ad;
+import models.Config;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-
-@WebServlet(name = "CreateAdServlet", urlPatterns = "/ads/create")
+import com.mysql.cj.jdbc.Driver;
+@WebServlet(name = "controllers.CreateAdServlet", urlPatterns = "/ads/create")
 public class CreateAdServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.getRequestDispatcher("/WEB-INF/ads/create.jsp")
@@ -18,7 +26,13 @@ public class CreateAdServlet extends HttpServlet {
             request.getParameter("title"),
             request.getParameter("description")
         );
-        DaoFactory.getAdsDao().insert(ad);
+        Config config = new Config();
+        Ads adsDao = DaoFactory.getAdsDao(config);
+        adsDao.insertAd(ad);
         response.sendRedirect("/ads");
     }
+
+
 }
+
+

@@ -1,6 +1,15 @@
+package dao;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import models.Ad;
 import java.util.ArrayList;
 import java.util.List;
+import com.mysql.cj.jdbc.Driver;
 
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class ListAdsDao implements Ads {
     private List<Ad> ads;
 
@@ -11,17 +20,22 @@ public class ListAdsDao implements Ads {
         return ads;
     }
 
-    public Long insert(Ad ad) {
+    public void insertAd(Ad ad) {
         // make sure we have ads
         if (ads == null) {
             ads = generateAds();
         }
-        // we'll assign an "id" here based on the size of the ads list
-        // really the database would handle this
-        ad.setId((long) ads.size());
+        ad.setId(ads.size());//set ad ID
         ads.add(ad);
-        return ad.getId();
     }
+
+
+    @Override
+    public MySQLAdsDao insert(Ad Ad) {
+        return null;
+    }
+
+
 
     private List<Ad> generateAds() {
         List<Ad> ads = new ArrayList<>();
@@ -52,3 +66,4 @@ public class ListAdsDao implements Ads {
         return ads;
     }
 }
+
